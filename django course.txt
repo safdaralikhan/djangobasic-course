@@ -1,0 +1,89 @@
+pip install virtualenvwrapper-win (to install virtualenvironment).
+pip install django (to install django).
+mkvirtualenv and projct name (to create virtual env).
+why we create virtual env ?
+A virtual environment is a tool that helps to keep dependencies required by different
+ projects separate by creating isolated python virtual environments for them. 
+This is one of the most important tools that most of the Python developers use.
+
+Imagine a scenario where you are working on two web based python projects and one of
+them uses a Django 1.9 and the other uses Django 1.10 
+and so on. In such situations virtual environment can be really useful
+to maintain dependencies of both the projects.
+
+workon and project name (to activate env)
+pip freeze (to check what libraries are install with the installation of django).
+django-admin startproject projectname (to create django project)
+jo project create kiya ha us k ander aa k virtual create krna ha or phr activate krna hai or phr vs code ma projrct kholna ha.
+python managee.py runserver (to start python project).
+python manage.py createsuperuser (to create superadmin and set its credientiols).
+python manage.py migrate (jb b hum app ya project mai changes krty hai is k chalany sy us changes ki ek file create hoti ha ).
+python manage.py startapp app name (to create app in a project)
+
+HOW DJANGO PROJECT WORKS?
+1) first create django project.
+then create app in the project and register the app in setting.py file.
+2) then we give app path in project urls to access that app.
+3) when we hit app url it goes in project url to check which app you want to access
+then it check and goes to that app url file to check which path you want to access.
+then it go to views file and acess that function.
+
+project URLS FILE ----> CHECK WHICH APP TO ACCESS -----> GOTO APP URL FILE AND ACESS PATH -----> VIEWS FILE
+
+WHAT IS MODAL.PY IN APP ?
+A model is a class that represents table or collection in our DB,
+and where every attribute of the class is a field of the table or collection.
+
+WHAT IS VIEWS.PY ?
+What is Django views py for?
+Django views are Python functions that takes http requests and returns http response, 
+like HTML documents. A web page that uses Django is full of views with different tasks and missions.
+
+
+TEMPLATES
+
+What are Django Templates?
+Django templates combine a static HTML layout with Django Syntax, which is Python code. Both of these 
+components aid in the dynamic generation of HTML pages, making your website more user-friendly. 
+The basic goal of Django templates is to keep the data representation distinct from the data itself.
+
+project k folder k bhr ek templates ka folder bana k us k ander html ka page bana do. or us ko
+ setting.py mai templates k section mai folder ka name add kr do DIRS MAI.
+us k bd app k views.py file mai us k liye function bana k us k ander render kara do index page ko.
+
+STATICS FILE
+static file add krny k liye kuch configration krni hoti hai setting.py or project k url.py mai.
+setting.py mai ya code rakhna ha
+
+STATIC_ROOT = "/staticfiles/"
+STATIC_URL = 'static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+
+project k urls.py mai ya code rakhna ha.
+
++static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+humy static file project k file k bhr bana na hai jaha templates ka folder ta.
+us k andr ek txt ki file bana k templates k index. html k andr us ko access kr sakty hai
+{%static load %} ya sb sy uper index.html mai addd kr k.
+
+
+what is CSRF TOKEN
+
+form banany k bd us k liye views mai ek function bany ga jis pai request ayegi post ki.
+us k bd us function ka url banana hai app k urls mai.
+ab uai function ka data humy data base mai save krna hai jis k liye hum models mai jaa k ek class banai gy jis mai us ka schema define kary gy.
+jb b koi modal.py mai kaam hota hai humy us changes k bd makemigrations ki command chalani hoti hai or us k bd migrate tab ja k database mai 
+wo class show hota hai jo hum ny banaya hota hai.
+us k bd admin panel mai is schema ko show karany k liye app mai admin.py mai register krna hota ha us class ko jo hum ny banaya hota hai.
+password install krny k liye humy pipp install passlib install krna parhta ha phr database mai password encrypt ho k ata hai.
+
+
+
+
+
+
+
