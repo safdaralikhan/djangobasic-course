@@ -73,6 +73,8 @@ us k andr ek txt ki file bana k templates k index. html k andr us ko access kr s
 
 what is CSRF TOKEN
 
+Django has a {% csrf_token %} tag that is implemented to avoid malicious attacks. It generates a token on the server-side when rendering the page and makes sure to cross-check this token for any requests coming back in. If the incoming requests do not contain the token, they are not executed.
+
 form banany k bd us k liye views mai ek function bany ga jis pai request ayegi post ki.
 us k bd us function ka url banana hai app k urls mai.
 ab uai function ka data humy data base mai save krna hai jis k liye hum models mai jaa k ek class banai gy jis mai us ka schema define kary gy.
